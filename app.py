@@ -44,7 +44,7 @@ with col2:
 df = pd.read_csv("./sales_data.csv")
 
 st.set_page_config(layout="wide")
-df_region_rcp = df.drop(columns=["order_date", "product", "channel", "quantity"], axis=1).groupby(by="region").sum().reset_index()
+df_region_rcp = df.drop(columns=["order_date", "product", "channel", "quantity"]).groupby(by="region").sum().reset_index()
 
 
 # Dataframe styling code START
